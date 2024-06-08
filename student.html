@@ -1,1 +1,295 @@
-this is student form
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form id="registration-form">
+            <label for="name">Fullname:</label>
+            <input type="text" id="name" name="name">
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password">
+
+
+            <label for="roll-no">SDMS-Code:</label>
+            <input type="text" id="roll-no" name="roll-no">
+
+            <label for="course">Trade:</label>
+            <select id="course" name="course">
+                <option value="">SelectTrade</option>
+                <option value="sod">Software Development</option>
+                <option value="net">Networking</option>
+                <option value="mec">Math Economic And Computer </option>
+                <option value="TEL">Telecommunication</option>
+            </select>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course">
+                <option value="">Select Course</option>
+                <option value="js">Javascrip</option>
+                <option value="vcs">Version Control System</option>
+                <option value="web">Website Development</option>
+                <option value="ui/ux">UI/UX Design</option>
+            </select>
+
+
+            <input type="submit" value="Register">
+        </form>
+        <p id="error-message"></p>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <div id="ll">
+        <p style="text-align: center; color: gray; font-family: fantasy; margin-bottom: 17px;">&copy;_Ish.J.C 2024</p>
+    </div>
+
+
+    <script>
+const form = document.getElementById('registration-form');
+const errorMessage = document.getElementById('error-message');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const rollNo = document.getElementById('roll-no').value;
+    const course = document.getElementById('course').value;
+
+    // Validate form fields
+    if (!name ||!email ||!password ||!confirmPassword ||!rollNo ||!course) {
+        errorMessage.textContent = 'Please fill in all fields';
+        return;
+    }
+
+    if (password!== confirmPassword) {
+        errorMessage.textContent = 'Passwords do not match';
+        return;
+    }
+
+    alert('Registration successful!');
+});
+    </script>
+</body>
+
+</html><!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form id="registration-form">
+            <label for="name">Fullname:</label>
+            <input type="text" id="name" name="name">
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password">
+
+
+            <label for="roll-no">SDMS-Code:</label>
+            <input type="text" id="roll-no" name="roll-no">
+
+            <label for="course">Trade:</label>
+            <select id="course" name="course">
+                <option value="">SelectTrade</option>
+                <option value="sod">Software Development</option>
+                <option value="net">Networking</option>
+                <option value="mec">Math Economic And Computer </option>
+                <option value="TEL">Telecommunication</option>
+            </select>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course">
+                <option value="">Select Course</option>
+                <option value="js">Javascrip</option>
+                <option value="vcs">Version Control System</option>
+                <option value="web">Website Development</option>
+                <option value="ui/ux">UI/UX Design</option>
+            </select>
+
+
+            <input type="submit" value="Register">
+        </form>
+        <p id="error-message"></p>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <div id="ll">
+        <p style="text-align: center; color: gray; font-family: fantasy; margin-bottom: 17px;">&copy;_Ish.J.C 2024</p>
+    </div>
+
+
+    <script>
+const form = document.getElementById('registration-form');
+const errorMessage = document.getElementById('error-message');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const rollNo = document.getElementById('roll-no').value;
+    const course = document.getElementById('course').value;
+
+    // Validate form fields
+    if (!name ||!email ||!password ||!confirmPassword ||!rollNo ||!course) {
+        errorMessage.textContent = 'Please fill in all fields';
+        return;
+    }
+
+    if (password!== confirmPassword) {
+        errorMessage.textContent = 'Passwords do not match';
+        return;
+    }
+
+    alert('Registration successful!');
+});
+    </script>
+</body>
+
+</html>
