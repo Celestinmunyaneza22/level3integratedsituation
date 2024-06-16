@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    width: 400px;
+    width: 460px;
     margin: 40px auto;
     padding: 20px;
     background-color: #fff;
@@ -22,7 +22,7 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
+    width: 40rem;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
